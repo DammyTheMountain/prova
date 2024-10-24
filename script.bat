@@ -12,8 +12,15 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b %ERRORLEVEL%
 )
 
+:: Esegui git remote
+git remote main https://github.com/DammyTheMountain/prova.git
+if %ERRORLEVEL% NEQ 0 (
+    echo "git remote failed."
+    exit /b %ERRORLEVEL%
+)
+
 :: Esegui git push
-git push
+git push main
 if %ERRORLEVEL% NEQ 0 (
     echo "git push failed."
     exit /b %ERRORLEVEL%
