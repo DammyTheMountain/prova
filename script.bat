@@ -1,3 +1,6 @@
+cd "D:\repository\Dammy\Provascript"  
+:: Cambia la directory corrente nella cartella dello script
+
 :: Esegui git add
 git add .
 if %ERRORLEVEL% NEQ 0 (
