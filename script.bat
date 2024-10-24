@@ -1,3 +1,5 @@
+cd "D:\repository\Dammy\Provascript"
+
 :: Esegui git add
 git add .
 if %ERRORLEVEL% NEQ 0 (
@@ -12,15 +14,8 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b %ERRORLEVEL%
 )
 
-:: Esegui git remote
-git remote main https://github.com/DammyTheMountain/prova.git
-if %ERRORLEVEL% NEQ 0 (
-    echo "git remote failed."
-    exit /b %ERRORLEVEL%
-)
-
 :: Esegui git push
-git push main
+git push
 if %ERRORLEVEL% NEQ 0 (
     echo "git push failed."
     exit /b %ERRORLEVEL%
